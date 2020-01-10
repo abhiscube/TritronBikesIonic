@@ -13,7 +13,8 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+              import('../home/home.module').then(m => m.HomePageModule)
+              //import('../tab1/tab1.module').then(m => m.Tab1PageModule)
           }
         ]
       },
@@ -23,7 +24,8 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+              import('../services/services.module').then(m => m.ServicesPageModule)
+              //import('../tab2/tab2.module').then(m => m.Tab2PageModule)
           }
         ]
       },
@@ -33,7 +35,28 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+            import('../profile/profile.module').then(m => m.ProfilePageModule)
+             // import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+          }
+        ]
+      },
+      {
+        path: 'tab4',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../events/events.module').then(m => m.EventsPageModule)
+          }
+        ]
+      }, 
+       {
+        path: 'tab5',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../orders/orders.module').then(m => m.OrdersPageModule)
           }
         ]
       },

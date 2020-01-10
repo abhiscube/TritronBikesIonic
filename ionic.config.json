@@ -1,5 +1,7 @@
 {
   "name": "Tritron-Bikes",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
